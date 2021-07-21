@@ -21,8 +21,10 @@ Widget::~Widget()
 }
 
 void Widget::setImages(){
-    double A[ax][ay];
-    double B[bx][by];
+    // double A[ax][ay];
+    // double B[bx][by];
+    std::vector< std::vector<double> > A(ay, std::vector<double>(ax, 0.0));
+    std::vector< std::vector<double> > B(by, std::vector<double>(bx, 0.0));
 
     int proportion = bx/ax;
     for (int i = 0; i < ax; i++)
